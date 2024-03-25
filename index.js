@@ -20,23 +20,23 @@ const options = program.opts();
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      const listedContacts = await listContacts(); // Виклик функції listContacts()
-      console.log(listedContacts); // Вивід результату в консоль
+      const listedContacts = await listContacts();
+      console.log(listedContacts);
       break;
 
     case "get":
-      const foundContact = await getContactById(id); // Виклик функції getContactById() з переданим id
-      console.log(foundContact); // Вивід результату в консоль
+      const foundContact = await getContactById(id);
+      console.log(foundContact);
       break;
 
     case "add":
-      const addedContact = await addContact(name, email, phone); // Виклик функції addContact() з переданими name, email, phone
-      console.log(addedContact); // Вивід результату в консоль
+      const addedContact = await addContact(name, email, phone);
+      console.log(addedContact);
       break;
 
     case "remove":
-      const removedContact = await removeContact(id); // Виклик функції removeContact() з переданим id
-      console.log(removedContact); // Вивід результату в консоль
+      const removedContact = await removeContact(id);
+      console.log(removedContact);
       break;
 
     default:
